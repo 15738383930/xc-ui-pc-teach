@@ -9,7 +9,8 @@
       :limit="picmax"
       :on-exceed="rejectupload"
       :before-remove="handleRemove"
-      :data="uploadval">
+      :data="uploadval"
+      name="file">
       <i class="el-icon-plus"></i>
     </el-upload>
   </div>
