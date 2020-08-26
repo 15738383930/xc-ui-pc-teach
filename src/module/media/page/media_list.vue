@@ -29,7 +29,7 @@
       </el-table-column>
       <el-table-column prop="fileName" label="文件名称" width="220">
       </el-table-column>
-      <el-table-column prop="fileUrl" label="访问url" width="260">
+      <el-table-column prop="filePath" label="访问url" width="260">
       </el-table-column>
       <el-table-column prop="tag" label="标签" width="100">
       </el-table-column>
@@ -109,12 +109,12 @@
             this.$message.error('该文件未处理，不允许选择');
             return ;
           }
-        if(!mediaFile.fileUrl){
+        if(!mediaFile.filePath){
           this.$message.error('该文件的访问url为空，不允许选择');
           return ;
         }
         //调用父组件的choosemedia方法
-        this.$emit('choosemedia',mediaFile.fileId,mediaFile.fileOriginalName,mediaFile.fileUrl);
+        this.$emit('choosemedia',mediaFile.fileId,mediaFile.fileOriginalName,mediaFile.filePath);
       },
       changePage(page){
         this.params.page = page;
